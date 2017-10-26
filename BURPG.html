@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Projects</title>
+		<title>Contributions to BURPG</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -52,42 +52,24 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Projects</h1>
-							<section class="tiles">
-								<article class="style4">
-									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
-									</span>
-									<a href="BURPG.html">
-										<h2>BURPG</h2>
-										<div class="content">
-											<p>See what I've done at BURPG</p>
-										</div>
-									</a>
-								</article>
-								<article class="style5">
-									<span class="image">
-										<img src="images/pic05.jpg" alt="" />
-									</span>
-									<a href="BirthdayPresents.html">
-										<h2>Birthday Presents</h2>
-										<div class="content">
-											<p>See what I've given my friends for their birthdays</p>
-										</div>
-									</a>
-								</article>
-								<article class="style6">
-									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
-									</span>
-									<a href="MiscellaneousProjects.html">
-										<h2>Miscellaneous</h2>
-										<div class="content">
-											<p>See what random things I've done</p>
-										</div>
-									</a>
-								</article>
-							</section>
+							<h1>Contributions to BURPG</h1>
+							<span class="image main"><a href="https://www.burocket.org/" target="_blank"><img src="images/BURPG.jpg" alt="" style="width:500px;height:223px;text-align:center;"/></a></span>
+							<h2>Year 1 (Ongoing)</h2>
+								<p>During my first year at BURPG I took part in the team's high-powered rocket competition, the goal of which was to design and build a rocket that would reach an altitude as close to
+									4000 feet as possible. Onboard the rocket must be an altimeter that we design and build ourselves, and its readings must be as close to a store-bought altimeter as possible. Additionally,
+									the rocket must record some sort of data, which the onboard computer (which we also design and build ourselves) interprets into a real-life application.</p>
+								<p>The rocket I helped design was called Project Platypus because it detected Earth's magnetic field and measured the growth rate of bacteria at high altitudes and G-forces, and apparently
+									platypi use the Earth's magnetic field to hunt and thus to grow. Our rocket used a magnetometer to measure the magnitude of Earth's magnetic field, which our onboard computer system
+									(modeled after an Arduino but printed on our own PCB) polled and stored the data from at regular time intervals. The board then used the Chapman-Ferraro equation to calculate the altitude of
+									Earth's magnetopause during a significantly powerful coronal mass ejection, thus giving us a rough estimate for a safe altitude for astronauts before deleterious health effects from solar
+									radiation start to become an issue. The altimeter we designed also was polled at the same time intervals, so we were able to establish a relationship between altitude and the strength of Earth's magnetic
+									field.</p>
+								<p>Onboard the rocket was also a cuvette containing common bacteria. The cuvette was placed inside a dark 3D printed box, inside of which were violet LEDs on one side and a photoresistor on the other.
+									Over the course of the flight, the bacteria reproduced, thus decreasing the amount of light that reached the photoresistor, which the onboard computer system measured. Another identical setup was on the ground
+									as a control. Thus, by comparing the change in voltage measured by the onboard computer system to the change in voltage detected on the ground, we could determine whether high altitudes and G-forces affect
+									the growth rate of bacteria.</p>
+								<p>To make the competition more representative of a real-life fast-paced engineering environment, a last-minute requirement was added: our rocket had to take a video of the entire flight!</p>
+								<p>As of October 26, 2017, our team is in the preliminary design review stage.</p>
 						</div>
 					</div>
 
