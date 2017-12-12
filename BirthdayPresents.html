@@ -57,13 +57,22 @@
 			<!--		<span class="image main"><img src="images/pic13.jpg" alt="" /></span>		-->
 								<h2>December 9: Music Box</h2>
 									<p>My friend loves listening to music, and I wanted to make that experience a bit more dynamic for her. I decided to make her a box that, when plugged into an audio source,
-										flashed turquoise light (her favorite color) along with the music. To do this, I used a transistor to regulate voltage running across a series of LEDs according to the amplitude
+										flashed colored light along with the music. To do this, I used a transistor to regulate voltage running across a series of LEDs according to the amplitude
 										of the audio signal; when the music gets louder, the box gets brighter. A basic circuit diagram is provided below. I used a TIP31c transistor in the circuit.</p>
 											<span class="image"><img src="images/MusicBoxDiagram.jpg" alt="" style="" /></span>
-									<p>I made the box out of lucite, and went over the entire surface with sandpaper to give the light a more diffused characteristic. I also sanded the LEDs for the same effect.
-										Perhaps for a future project, I may make a similar box, but with four green LEDs, one yellow LED, and one red LED, and each LED is lit up in turn with increasing volume, i.e.
-										a high volume would light them all, while a medium volume would, say illuminate only three of the green LEDs.</p>
-									<p>Yet to be completed.</p>
+									<p>I built a working prototype on a breadboard as a proof-of-concept using a single LED, a TIP31c transistor, and a 3.5mm audio jack breakout board.</p>
+									<span class="image"><img src="images/musicboxprototype.jpg" alt="" style="width:605px;height:466px;"/></span>
+									<p>The final project was soldered onto a stripboard using four red LEDs and a TIP31c transistor. Instead of a 9V battery, like the prototype used, I attached a 12V wall-adapter to an XT60 connector,
+										which powered the entire circuit. This was my first time soldering, and I had a lot of fun learning!</p>
+									<span class="image"><img src="images/musicboxfinal.jpg" alt="" style="width:756px;height:668px;"/></span>
+									<p>Below is a video of the final product working. I made the box out of a 2 Liter bottle, and went over the LEDs to give the light a more diffused characteristic.
+										To improve on this project, I would include an op-amp so that the computer's volume does not have to be very high to trigger the LEDs,
+										and a voltage regulator switch to make sure that the LEDs don't receive too much voltage.</p>
+									<video width="768" controls>
+	  								<source src="images/musicboxdemo.mp4" type="video/mp4">
+	  								Your browser does not support HTML5 video.
+									</video>
+									<p></p>
 								<h2>January 25: Hometown Chains</h2>
 									<p>One of my friends is from Taiwan, so I made her something that could remind her of home. I made a 3D printed pendant in the shape of Taiwan
 										that she could wear as a necklace or a bracelet.</p>
