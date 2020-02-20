@@ -45,7 +45,6 @@
 							<li><a href="index.html">Home</a></li>
 							<li><a href="engineering_resume.html">Resume</a></li>
 							<li><a href="projects.html">Projects</a></li>
-							<li><a href="AboutMe.html">Fun Facts About Me</a></li>
 							<li><a href="ContactInfo.html">Contact Info</a></li>
 						</ul>
 					</nav>
@@ -54,30 +53,36 @@
 					<div id="main">
 						<div class="inner">
 							<h1>Projects</h1>
-							<section class="tiles">
-								<article class="style8">
-									<span class="image">
-										<img src="images/pic08.jpg" alt="" />
-									</span>
-									<a href="BirthdayPresents.html">
-										<h2>Birthday Presents</h2>
-										<div class="content">
-											<p>See what I've built for my friends' birthdays</p>
-										</div>
-									</a>
-								</article>
-								<article class="style9">
-									<span class="image">
-										<img src="images/pic09.jpg" alt="" />
-									</span>
-									<a href="MiscellaneousProjects.html">
-										<h2>Miscellaneous</h2>
-										<div class="content">
-											<p>See what random things I've made</p>
-										</div>
-									</a>
-								</article>
-							</section>
+							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
+							<h2>Solar Energy Challenge Design Project: Fall 2019</h2>
+								<p>For my final project for my power electronics class, I designed an interface circuit to harness the energy from a solar panel as efficiently
+									as possible, and transform it to an AC square wave. I did this first by simulating a solar panel with a power BJT, since the IV curve of a
+									BJT resembles that of a photovoltaic cell. Then, a boost converter transforms the impedance of the BJT circuit such that its equivalent resistance
+									matched that of my load, allowing for maximum power transfer. Finally, an H-bridge MOSFET configuration created a 60Hz AC square wave. A picture of
+									my final circuit is shown below:</p>
+									<span class="image"><img src="images/solarpanelcircuit.jpg" alt="" style="width:625px;" /></span>
+								<p>The boost converter is on the lower breadboard and the H-bridge is on the upper breadboard. Both the boost converter and H-bridge pictured here are
+									timed with 555 timer circuits. The boost converter has adjustable duty cycle and the H-bridge is driven by high-side drivers with a simple MOSFET
+									inverter to achieve the inverted 60Hz PWM signal.</p>
+								<p>Not pictured, the 555 timer circuit driving the boost converter was replaced with a microcontroller programmed with a maximum power point tracking
+									algorithm so that the maximum power could be harvested from the solar panel regardless of sun level. Also not pictured, a transformer was used to
+									step up the AC square wave (after filtering out the upper harmonics) to ~120V  60Hz AC sine wave.</p>
+							<h2>WiFi LED Lamp: Fall 2019</h2>
+								<p>I designed a three-channel switching constant current driver for a high power RGB LED controlled by an ESP8266 microcontroller over WiFi.
+									The circuit is based on easily sourced components like op-amps and MOSFETs. One channel of the circuit is shown below:</p>
+									<span class="image"><img src="images/CCD.jpg" alt="" style="width:625px;" /></span>
+								<p>The PWM signal from the microcontroller is first fed into an RC filter to produce a reference voltage. This reference is then fed into a
+									comparator which swings low when the current through the sampling resistor series with the LED reaches a threshold set by the noninverting
+									op-amp. The inductor maintains a smoother steady-state current through the LED.
+							<h2>NoTacToe: Fall 2018</h2>
+								<p>This was a final project for my software engineering class. It is an android app of the game NoTacToe, a version of TicTacToe where only
+								   x's are used, and the first player to make three in a row loses. Code for the project can be found on my <a href="https://github.com/benjesuis/NoTacToe">github.</a></p>
+							<h2>Reader Resume: Fall 2017</h2>
+								<p>This is a school project written in MATLAB that evaluates user inputted resumes based on their word choice. The app uses a dataset of the
+								100,000 most common English words and a benchmark set of sample resumes collected from various universities to rate the user's resume based
+								on how similar it is to the sample resumes.</p>
+								<a href="files/ReaderResume.zip" download class="button">Evaluate your resume!</a>
+
 						</div>
 					</div>
 
@@ -107,7 +112,6 @@
 								<h2>Contact</h2>
 								<ul class="icons">
 									<li><a href="https://github.com/benjesuis" class="icon style2 fa-github"><span class="label">Github</span></a></li>
-									<li><a href="https://www.facebook.com/ben.livney" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
 									<li><a href="https://www.linkedin.com/in/benlivney/" class="icon style2 fa-linkedin"><span class="label">Dribbble</span></a></li>
 									<li><a href="mailto: &#098;&#101;&#110;&#106;&#097;&#109;&#105;&#110;&#108;&#105;&#118;&#110;&#101;&#121;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
 								</ul>
