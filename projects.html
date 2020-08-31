@@ -54,6 +54,29 @@
 						<div class="inner">
 							<h1>Projects</h1>
 							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
+							<h2>Self-Cleaning Solar Panel Power Supply and Driver: Summer 2020</h2>
+								<p>During the Coronavirus lockdown, I had the opportunity to take on a remote design project for the lab that I work in at school. I was tasked with designing
+									a novel power supply to drive electrodynamic screens for self cleaning solar panels, and the results of this project are explained here.</p>
+								<p>The electrodynamic screens, or EDS (pictured below), are plates of glass with wires on the order of tens to hundreds of microns thick and about a millimeter apart
+									embedded inside them. Every third wire is connected, so when a high voltage (>1.2kV) is applied to every third wire in three phase square waves, a sort of 
+									standing wave effect of electrostatic forces pushes fine desert dust particles off of to the side, thereby increasing the efficiency of the solar cell underneath.</p>
+									<span class="image"><img src="images/edsglass.jpg" alt="" style="width:625px;" /></span>
+								<p>I chose a cascaded boost converter topology (shown below) as my high voltage generator, because it can easily be made with discrete components and is simple enough to
+									understand for other undergraduate students down the line. Since the EDS are not resistive loads but capacitive ones, the cascaded boost converter (CBC) acts like a 
+									current source, charging up the inherent capacitance of the EDS and then discharging it to get ready for the next cycle.</p>
+									<span class="image"><img src="images/cbc.jpg" alt="" style="width:625px;" /></span>
+								<p>The CBCs are controlled by an analog hysteretic feedback network that is programmable to set the peak output voltage up to 1.5kV. Although part of the design requirements for
+									this iteration of the design were to use all widely available analog components, the CBCs can easily be driven instead with a microcontroller, which would cut costs and
+									make scaling the product easier. Below is a schematic of one channel of the feedback loop, however the final design features 3 CBCs and 3 feedback loops.</p>
+									<span class="image"><img src="images/hystereticfeedback.jpg" alt="" style="width:625px;" /></span>
+								<p>Here is the entire power supply on a breadboard, the PCB layout, and a video of the power supply in action! The EDS used in the video is an old prototype where the wires are 
+									traces in a PCB.</p>
+									<span class="image"><img src="images/cbcbreadboard.jpg" alt="" style="width:625px;" /></span>
+									<span class="image"><img src="images/cbcpcb.jpg" alt="" style="width:625px;" /></span>
+									<video width="625" controls>
+  										<source src="width300um_spacing600um.mp4" type="video/mp4">
+  										Your browser does not support the video tag.
+									</video>
 							<h2>Solar Energy Challenge Design Project: Fall 2019</h2>
 								<p>For my final project for my power electronics class, I designed an interface circuit to harness the energy from a solar panel as efficiently
 									as possible, and transform it to an AC square wave. I did this first by simulating a solar panel with a power BJT, since the IV curve of a
@@ -74,7 +97,7 @@
 								<p>The PWM signal from the microcontroller is first fed into an RC filter to produce a reference voltage. This reference is then fed into a
 									comparator which swings low when the current through the sampling resistor series with the LED reaches a threshold set by the noninverting
 									op-amp. The inductor smooths out the current through the LED. Not pictured here, I added an extra flyback diode across the inductor to prevent high
-									voltage spikes</p>
+									voltage spikes.</p>
 							<h2>NoTacToe: Fall 2018</h2>
 								<p>This was a final project for my software engineering class. It is an android app of the game NoTacToe, a version of TicTacToe where only
 								   x's are used, and the first player to make three in a row loses. Code for the project can be found on my <a href="https://github.com/benjesuis/NoTacToe">github.</a></p>
