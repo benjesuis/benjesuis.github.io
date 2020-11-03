@@ -58,19 +58,20 @@
 								<p>During the Coronavirus lockdown, I had the opportunity to take on a remote design project for the lab that I work in at school. I was tasked with designing
 									a novel power supply to drive electrodynamic screens for self cleaning solar panels, and the results of this project are explained here.</p>
 								<p>The electrodynamic screens, or EDS (pictured below), are plates of glass with wires on the order of tens to hundreds of microns thick and about a millimeter apart
-									embedded inside them. Every third wire is connected, so when a high voltage (>1.2kV) is applied to every third wire in three phase square waves, a sort of 
+									embedded inside them. Every third wire is connected, so when a high voltage (>1.2kV) is applied to every third wire in three phase square waves, a sort of
 									standing wave effect of electrostatic forces pushes fine desert dust particles off of to the side, thereby increasing the efficiency of the solar cell underneath.</p>
 									<span class="image"><img src="images/edsglass.jpg" alt="" style="width:625px;" /></span>
 								<p>I chose a cascaded boost converter topology (shown below) as my high voltage generator, because it can easily be made with discrete components and is simple enough to
-									understand for other undergraduate students down the line. Since the EDS are not resistive loads but capacitive ones, the cascaded boost converter (CBC) acts like a 
+									understand for other undergraduate students down the line. Since the EDS are not resistive loads but capacitive ones, the cascaded boost converter (CBC) acts like a
 									current source, charging up the inherent capacitance of the EDS and then discharging it to get ready for the next cycle.</p>
 									<span class="image"><img src="images/cbc.png" alt="" style="width:625px;" /></span>
 								<p>The CBCs are controlled by an analog hysteretic feedback network that is programmable to set the peak output voltage up to 1.5kV. Although part of the design requirements for
 									this iteration of the design were to use all widely available analog components, the CBCs can easily be driven instead with a microcontroller, which would cut costs and
 									make scaling the product easier. Below is a schematic of one channel of the feedback loop, however the final design features 3 CBCs and 3 feedback loops.</p>
 									<span class="image"><img src="images/hystereticfeedback.png" alt="" style="width:625px;" /></span>
-								<p>Here is the entire power supply on a breadboard, the PCB layout, and a video of the power supply in action! The EDS used in the video is an old prototype where the wires are 
+								<p>Here is the entire power supply on a breadboard, the PCB layout, and a video of the power supply in action! The EDS used in the video is an old prototype where the wires are
 									traces in a PCB.</p>
+								<p> </p>
 									<span class="image"><img src="images/cbcbreadboard.jpg" alt="" style="width:625px;" /></span>
 									<span class="image"><img src="images/cbcpcb.png" alt="" style="width:625px;" /></span>
 									<video width="625" controls>
@@ -78,6 +79,9 @@
 										<!-- <source src="images/width300um_spacing600um.ogg" type="video/ogg"> -->
   										Your browser does not support the video tag.
 									</video>
+								<p>Here is a picture of a fully assembled power supply! It is capable of driving a 0.1m<sup>2</sup> EDS while only consuming 1.2W of power, and a 6m<sup>2</sup> EDS while consuming
+									2.7W. The empty footprints are for additional relief MOSFETs for high current applications.</p>
+									<span class="image"><img src="images/cbcassembled.jpg" alt="" style="width:625px;" /></span>
 								<p></p>
 							<h2>Solar Energy Challenge Design Project: Fall 2019</h2>
 								<p>For my final project for my power electronics class, I designed an interface circuit to harness the energy from a solar panel as efficiently
